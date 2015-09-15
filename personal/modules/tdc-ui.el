@@ -23,4 +23,7 @@
    (current-buffer)))
 (global-set-key (kbd "C-c j") 'toggle-window-dedication)
 
+;; Custom key bindings
+(define-key key-translation-map (kbd "s-3") (kbd "#"))
+
 (provide 'tdc-ui)
