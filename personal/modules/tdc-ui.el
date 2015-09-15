@@ -7,6 +7,10 @@
 
 ;;; Code:
 
+;; Prefer vertical split
+(setq split-height-threshold nil)
+(setq split-width-threshold 160)
+
 ;; Toggle window dedication
 (defun toggle-window-dedication ()
   "Toggle whether the current active window is dedicated or not."
