@@ -17,8 +17,7 @@
 (erc-autojoin-enable)
 
 (setq erc-autojoin-channels-alist
-      '(("rackspace.com" "#NebOps" "#cloudoutage")
-        ("freenode.net" "#rackred" "#reach-qe" "#reach-dev")))
+      '(("freenode.net" "#ansible")))
 
 (setq erc-nick "tobyclemson")
 (setq erc-auto-query "frame")
@@ -74,14 +73,9 @@
   (interactive)
   (connect-to "irc.freenode.net"))
 
-(defun connect-to-rackspace-irc ()
+(defun connect-irc ()
   (interactive)
-  (connect-to "irc.intra.rackspace.com"))
-
-(defun reach-irc ()
-  (interactive)
-  (connect-to-freenode-irc)
-  (connect-to-rackspace-irc))
+  (connect-to-freenode-irc))
 
 (defun notify-privmsg (proc parsed)
   (let ((nick (car (erc-parse-user (erc-response.sender parsed))))
